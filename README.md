@@ -19,7 +19,7 @@ The easiest way to run this entire project is by using Docker.
 2. Installing first dependencies with `npm i typescript @types/node ts-node nodemon --save-dev`
 3. Generating typescript config with `npx tsc --init --rootDir src --outDir build --esModuleInterop --resolveJsonModule --lib es6 --module commonjs --allowJs true --noImplicitAny true`
 4. Created `Dockerfile` and `docker-compose.yml` files to containerize the application
-5. Installing dependencies with `npm i express sequelize pg pg-hstore` and `npm i @types/pg @types/express --save-dev`
+5. Installing dependencies with `npm i express sequelize pg pg-hstore cors` and `npm i @types/pg @types/express @types/cors --save-dev`
 6. Created base structure for application containing the following files and folders:
   * controller - contains express routers 
     * search.ts - search router
