@@ -2,8 +2,11 @@ import express, { Application } from "express";
 import cors from "cors";
 
 import sequelize from "./model";
+
 import ErrorHandlerMiddleware from "./middleware/error-handler";
+
 import SearchRouter from "./controller/search";
+import ArticleRouter from "./controller/article";
 
 const app: Application = express();
 
@@ -18,5 +21,6 @@ app.use(
 );
 
 app.use("/search", SearchRouter);
+app.use("/article", ArticleRouter);
 
 export default app;

@@ -11,3 +11,10 @@ export const searchArticles = async (query: string) => {
   });
   return articles;
 };
+
+export const getArticleById = async (id: number) => {
+  const article = await Article.findOne({
+    where: { id },
+  });
+  return article;
+};
