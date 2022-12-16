@@ -16,7 +16,7 @@ The easiest way to run this entire project is by using Docker.
 
 ### Back end - My development process:
 1. Creating the project's package.json with `npm init -y`
-2. Installing first dependencies with `npm i typescript @types/node ts-node nodemon --save-dev`
+2. Installing first dependencies with `npm i typescript @types/node ts-node nodemon jest ts-jest @types/jest @types/supertest supertest --save-dev`
 3. Generating typescript config with `npx tsc --init --rootDir src --outDir build --esModuleInterop --resolveJsonModule --lib es6 --module commonjs --allowJs true --noImplicitAny true`
 4. Created `Dockerfile` and `docker-compose.yml` files to containerize the application
 5. Installing dependencies with `npm i express sequelize pg pg-hstore cors` and `npm i @types/pg @types/express @types/cors --save-dev`
@@ -33,6 +33,7 @@ The easiest way to run this entire project is by using Docker.
   * app.ts - contains express app instance
   * server.ts - entrypoint for application, executes express app listen function on port 3001
 7. Tested request flow with Insomnia app, ensuring everything works appropriately
+8. 
 
 ---
 ### Front end - My development process:

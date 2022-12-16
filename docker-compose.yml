@@ -8,6 +8,8 @@ services:
     volumes:
       - ./back-end:/app
     command: npm run start:dev
+    environment:
+      - NODE_ENV=development
     depends_on:
       - db
   db:

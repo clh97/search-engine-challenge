@@ -5,7 +5,7 @@ const sequelizeOptions: Sequelize.Options = {
   database: "app",
   username: "app",
   password: "app",
-  host: "db",
+  host: process.env.NODE_ENV === "test" ? "localhost" : "db",
   port: 5432,
   logging: true,
   sync: {
@@ -29,29 +29,5 @@ Article.init(
   },
   { sequelize, modelName: "article" }
 );
-
-seed();
-
-async function seed() {
-  await Article.sync({ force: true });
-  await Article.create({
-    title: "First Article",
-    photo: "https://placekitten.com/200/300",
-    description: "This is the First article",
-    shortDescription: "First Article",
-  });
-  await Article.create({
-    title: "Third Article",
-    photo: "https://placekitten.com/300/200",
-    description: "This is the Second article",
-    shortDescription: "Second Article",
-  });
-  await Article.create({
-    title: "Third Article",
-    photo: "https://placekitten.com/500/250",
-    description: "This is the Third article",
-    shortDescription: "Third Article",
-  });
-}
 
 export default sequelize;

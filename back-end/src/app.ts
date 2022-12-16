@@ -14,11 +14,13 @@ app.set("sequelize", sequelize);
 app.set("models", sequelize.models);
 
 app.use(ErrorHandlerMiddleware);
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-  })
-);
+if (process.env.NODE_ENV === "development") {
+  app.use(
+    cors({
+      origin: "http://localhost:3000",
+    })
+  );
+}
 
 app.use("/search", SearchRouter);
 app.use("/article", ArticleRouter);

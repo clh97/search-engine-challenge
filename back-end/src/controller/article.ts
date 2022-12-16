@@ -21,6 +21,15 @@ ArticleRouter.get(
 
     const results = await getArticleById(id);
 
+    if (!results) {
+      const error: ErrorResponse = {
+        success: false,
+        error: "Article not found",
+        status: 404,
+      };
+      return res.status(error.status).json(error);
+    }
+
     const response: SuccessResponse = {
       success: true,
       data: results,

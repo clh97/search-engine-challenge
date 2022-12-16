@@ -7,18 +7,22 @@ import ArticleScreenStyles from "./ArticleScreen.styles";
 const ArticleScreen = () => {
   const { id } = useParams();
   const [article, setArticle] = useState({});
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetchArticle(id).then((response) => {
-      if (!response.data.success) {
-        throw new Error(`Error fetching article with id: ${id}`);
-      }
-
-      const { data: article } = response.data;
-
-      setArticle(article);
-    });
+    fetchArticle(id)
+      .then((response) => {
+        const { data: article } = response.data;
+        setArticle(article);
+      })
+      .catch((error) => {
+        setError(error);
+      });
   }, [id]);
+
+  if (error) {
+    throw error;
+  }
 
   return (
     <ArticleScreenStyles.Container>
