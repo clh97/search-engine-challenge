@@ -1,7 +1,7 @@
 version: '3'
 services:
   app:
-    build: .
+    build: ./back-end
     ports:
       - "3001:3001"
     working_dir: /app
