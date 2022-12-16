@@ -19,6 +19,7 @@ const SearchResults = ({ results }) => {
       <SearchResultsStyles.List>
         {results.map((result) => (
           <SearchResultsStyles.ListItem key={result.id}>
+            <SearchResultsStyles.ListItemLink to={`/article/${result.id}`} />
             <SearchResultsStyles.ListItemImageContainer>
               <SearchResultsStyles.ListItemImage src={result.photo} />
             </SearchResultsStyles.ListItemImageContainer>

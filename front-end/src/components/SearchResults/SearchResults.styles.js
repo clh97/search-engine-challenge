@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link as DOMLink } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
@@ -21,6 +22,7 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
+  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
@@ -37,6 +39,14 @@ const ListItem = styled.li`
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.05);
   }
+`;
+
+const ListItemLink = styled(DOMLink)`
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 `;
 
 const ListItemImageContainer = styled.div`
@@ -79,6 +89,7 @@ const SearchResultsStyles = {
   Title,
   List,
   ListItem,
+  ListItemLink,
   ListItemImageContainer,
   ListItemImage,
   ListItemContentContainer,
