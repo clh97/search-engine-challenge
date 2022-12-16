@@ -10,7 +10,7 @@ const Container = styled.div`
   padding: 1rem;
 `;
 
-const SearchContainer = styled.div`
+const SearchSection = styled.section`
   width: 320px;
   height: 100px;
   display: flex;
@@ -19,9 +19,20 @@ const SearchContainer = styled.div`
   justify-content: space-around;
 `;
 
+const SearchResultsSection = styled.section`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+`;
+
 const SearchScreenStyles = {
   Container,
-  SearchContainer,
+  SearchSection,
+  SearchResultsSection,
 };
 
 export default SearchScreenStyles;

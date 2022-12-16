@@ -67,4 +67,12 @@ export const GlobalStyles = createGlobalStyle`
   main {
     min-height: 100vh;
   }
+
+  body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f1f1f1;
+  }
 `;
