@@ -7,7 +7,7 @@ const SearchResults = ({ results }) => {
     return (
       <SearchResultsStyles.Container>
         <SearchResultsStyles.ErrorMessage>
-          No results found
+          Empty...
         </SearchResultsStyles.ErrorMessage>
       </SearchResultsStyles.Container>
     );
@@ -22,12 +22,14 @@ const SearchResults = ({ results }) => {
             <SearchResultsStyles.ListItemImageContainer>
               <SearchResultsStyles.ListItemImage src={result.photo} />
             </SearchResultsStyles.ListItemImageContainer>
-            <SearchResultsStyles.ListItemTitle>
-              {result.title}
-            </SearchResultsStyles.ListItemTitle>
-            <SearchResultsStyles.ListItemDescription>
-              {result.description}
-            </SearchResultsStyles.ListItemDescription>
+            <SearchResultsStyles.ListItemContentContainer>
+              <SearchResultsStyles.ListItemTitle>
+                {result.title}
+              </SearchResultsStyles.ListItemTitle>
+              <SearchResultsStyles.ListItemDescription>
+                {result.shortDescription}
+              </SearchResultsStyles.ListItemDescription>
+            </SearchResultsStyles.ListItemContentContainer>
           </SearchResultsStyles.ListItem>
         ))}
       </SearchResultsStyles.List>

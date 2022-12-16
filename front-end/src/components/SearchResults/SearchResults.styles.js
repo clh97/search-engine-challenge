@@ -23,25 +23,56 @@ const List = styled.ul`
 const ListItem = styled.li`
   display: flex;
   align-items: center;
-  justify-content: space-around;
-
   width: 100%;
+  min-height: 160px;
+  height: 160px;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.33);
+  border-radius: 7px;
+  transition: background-color 0.3s ease-in-out;
+  user-select: none;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
 `;
 
-const ListItemImageContainer = styled.div``;
+const ListItemImageContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+`;
 
 const ListItemImage = styled.img`
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  height: calc(720px / 5);
 `;
 
-const ListItemTitle = styled.h3``;
-
-const ListItemDescription = styled.span``;
-
-const ErrorMessage = styled.span`
-  color: red;
+const ListItemContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  padding: 0 1rem;
 `;
+
+const ListItemTitle = styled.h3`
+  align-self: flex-start;
+  justify-self: flex-start;
+  font-size: 1.5rem;
+`;
+
+const ListItemDescription = styled.span`
+  align-self: flex-start;
+  line-break: anywhere;
+`;
+
+const ErrorMessage = styled.span``;
 
 const SearchResultsStyles = {
   Container,
@@ -50,6 +81,7 @@ const SearchResultsStyles = {
   ListItem,
   ListItemImageContainer,
   ListItemImage,
+  ListItemContentContainer,
   ListItemTitle,
   ListItemDescription,
   ErrorMessage,

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { search } from "../../api";
 
 import Button from "../../components/generic/Button/Button";
@@ -12,16 +12,18 @@ const SearchScreen = () => {
   const inputRef = useRef(null);
   const [results, setResults] = useState([]);
 
-  const handleSearch = async () => {
+  const handleSearch = () => {
     const query = inputRef.current.value;
 
-    const response = await search(query);
+    search(query).then((response) => {
+      if (!response.data.success) {
+        throw new Error(`Error searching for query: ${query}`);
+      }
 
-    if (!response.success) {
-      return;
-    }
+      const { data: results } = response.data;
 
-    setResults(response.data);
+      setResults(results);
+    });
   };
 
   const onInputKeyDown = (e) => {
