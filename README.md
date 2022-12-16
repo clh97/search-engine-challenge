@@ -7,9 +7,14 @@ Tech stack used:
   * Back: Node, TypeScript, Sequelize and Postgres
   * Front: React, styled-components
 
+
+## How to run the application
+The easiest way to run this entire project is by using Docker.
+`docker compose up --build` command on the root directory should run the following integrated services: back, front, db, db admin (adminer)
+
 ---
 
-### My initialization steps:
+### Back end - My development process:
 1. Creating the project's package.json with `npm init -y`
 2. Installing first dependencies with `npm i typescript @types/node ts-node nodemon --save-dev`
 3. Generating typescript config with `npx tsc --init --rootDir src --outDir build --esModuleInterop --resolveJsonModule --lib es6 --module commonjs --allowJs true --noImplicitAny true`
@@ -27,6 +32,13 @@ Tech stack used:
     * http.ts - contains http success and error response interfaces
   * app.ts - contains express app instance
   * server.ts - entrypoint for application, executes express app listen function on port 3001
-7. Tested request flow, ensuring everything is working appropriately
+7. Tested request flow with Insomnia app, ensuring everything works appropriately
+
+---
+### Front end - My development process:
+1. Creating the project structure with `create-react-app front-end`, automatically delivers an working React application
+2. Created `Dockerfile` to speed up the testing process, created front service on `docker-compose.yml`
+3. Installed dependencies with `npm i styled-components axios`
+ 
 
 ---
