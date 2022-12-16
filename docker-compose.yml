@@ -22,3 +22,11 @@ services:
     image: adminer
     ports:
       - 8080:8080
+  front:
+    build: ./front-end
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./front-end:/app
+    working_dir: /app
+    command: npm run start
