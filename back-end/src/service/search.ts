@@ -5,7 +5,7 @@ export const searchArticles = async (query: string) => {
   const articles = await Article.findAll({
     where: {
       title: {
-        [Op.like]: `%${query}%`,
+        [Op.iLike]: `%${query}%`,
       },
     },
   });
