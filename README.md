@@ -12,6 +12,12 @@ Tech stack used:
 The easiest way to run this entire project is by using Docker.
 `docker compose up --build` command on the root directory should run the following integrated services: back, front, db, db admin (adminer)
 
+```markdown
+Important:
+The application will start without data on the postgres database, one quick way to add mock data to the database is by running `npm run test` after installing the dependencies, because this will use the actual db to insert mock data and this data will be available through the api.
+Under real-life circumnstances I would definitely use appropriate, separated environments for integration tests. 
+```
+
 ---
 
 ### Back end - My development process:
