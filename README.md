@@ -33,7 +33,7 @@ The easiest way to run this entire project is by using Docker.
   * app.ts - contains express app instance
   * server.ts - entrypoint for application, executes express app listen function on port 3001
 7. Tested request flow with Insomnia app, ensuring everything works appropriately
-8. 
+8. Added basic integration tests
 
 ---
 ### Front end - My development process:
