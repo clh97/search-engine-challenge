@@ -1,4 +1,4 @@
-# Vetrical Coding Challenge
+# Vertrical Coding Challenge
 
 ## Introduction
 
