@@ -16,6 +16,8 @@ The easiest way to run this entire project is by using Docker.
 Important:
 The application will start without data on the postgres database, one quick way to add mock data to the database is by running `npm run test` after installing the dependencies, because this will use the actual db to insert mock data and this data will be available through the api.
 Under real-life circumnstances I would definitely use appropriate, separated environments for integration tests. 
+
+Also, I would definitely use some sort of engine for indexing/caching in a real-world situation, like ElasticSearch.
 ```
 
 ---
