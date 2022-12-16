@@ -39,6 +39,21 @@ The easiest way to run this entire project is by using Docker.
 1. Creating the project structure with `create-react-app front-end`, automatically delivers an working React application
 2. Created `Dockerfile` to speed up the testing process, created front service on `docker-compose.yml`
 3. Installed dependencies with `npm i styled-components axios react-router-dom localforage match-sorter sort-by`
+4. Added initial folder structure:
+* src/api
+  * index.js - contains all api-related logic, would usually create separate files for separate endpoints
+* src/components
+  * components/generic - contains generic, reusable components that should be used to create non-generic components.
+  * components/SearchResults - non-generic component that displays search results, receives results as props
+* src/screens
+  * ArticleScreen - page for article entity visualization - requests article by id on entry and fallbacks to NotFoundScreen in case of errors
+  * NotFoundScreen - page for Not Found error
+  * SearchScreen - page for search screen, enables user to search articles through the api
+* NavigationStack - contains navigation routes
+* App.js - uses NavigationStack to display routes and render accordingly
+* index.js - application entrypoint - renders App.js
+5. Started developing generic components and SearchPage with SearchResults, search results contain links to Articles
+6. Started developing ArticleScreen, requesting Articles by ID on the api to display accordingly
  
 
 ---
