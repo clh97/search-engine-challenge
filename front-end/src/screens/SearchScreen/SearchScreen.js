@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { search } from "../../api";
 
 import Button from "../../components/generic/Button/Button";

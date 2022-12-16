@@ -9,4 +9,9 @@ export const search = async (query) => {
   return await api.get(url);
 };
 
+export const fetchArticle = async (id) => {
+  const url = api.getUri({ url: `/article/${id}` });
+  return await api.get(url);
+};
+
 export default api;
