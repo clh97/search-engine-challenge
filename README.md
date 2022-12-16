@@ -38,7 +38,7 @@ The easiest way to run this entire project is by using Docker.
 ### Front end - My development process:
 1. Creating the project structure with `create-react-app front-end`, automatically delivers an working React application
 2. Created `Dockerfile` to speed up the testing process, created front service on `docker-compose.yml`
-3. Installed dependencies with `npm i styled-components axios`
+3. Installed dependencies with `npm i styled-components axios react-router-dom localforage match-sorter sort-by`
  
 
 ---
