@@ -22,6 +22,8 @@ services:
     image: adminer
     ports:
       - 8080:8080
+    depends_on:
+      - db
   front:
     build: ./front-end
     ports:
@@ -30,3 +32,5 @@ services:
       - ./front-end:/app
     working_dir: /app
     command: npm run start
+    depends_on:
+      - app
