@@ -6,7 +6,7 @@ services:
       - "3001:3001"
     working_dir: /app
     volumes:
-      - .:/app
+      - ./back-end:/app
     command: npm run start:dev
     depends_on:
       - db
