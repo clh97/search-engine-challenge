@@ -39,6 +39,10 @@ const ListItemTitle = styled.h3``;
 
 const ListItemDescription = styled.span``;
 
+const ErrorMessage = styled.span`
+  color: red;
+`;
+
 const SearchResultsStyles = {
   Container,
   Title,
@@ -48,6 +52,7 @@ const SearchResultsStyles = {
   ListItemImage,
   ListItemTitle,
   ListItemDescription,
+  ErrorMessage,
 };
 
 export default SearchResultsStyles;

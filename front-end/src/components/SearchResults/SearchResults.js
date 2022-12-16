@@ -6,7 +6,9 @@ const SearchResults = ({ results }) => {
   if (!results || results.length === 0) {
     return (
       <SearchResultsStyles.Container>
-        <SearchResultsStyles.Error>No results found</SearchResultsStyles.Error>
+        <SearchResultsStyles.ErrorMessage>
+          No results found
+        </SearchResultsStyles.ErrorMessage>
       </SearchResultsStyles.Container>
     );
   }

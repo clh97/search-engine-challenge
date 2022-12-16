@@ -1,9 +1,9 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
 import InputStyles from "./Input.styles";
 
-const Input = (props) => {
-  return <InputStyles.Input {...props} />;
-};
+const Input = forwardRef((props, ref) => {
+  return <InputStyles.Input ref={ref} {...props} />;
+});
 
 export default Input;
